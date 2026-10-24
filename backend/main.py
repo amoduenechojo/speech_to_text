@@ -6,10 +6,10 @@ from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from .asr.engine import ASREngine
-from .asr.vad import SileroVAD
-from .config import settings
-from .websocket_handler import handle_connection
+from app.asr.engine import ASREngine
+from app.asr.vad import SileroVAD
+from app.config import settings
+from app.websocket_handler import handle_connection
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend"
 
