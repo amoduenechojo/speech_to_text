@@ -1,0 +1,153 @@
+:root {
+  --bg: #0b0d10;
+  --fg: #e6e6e6;
+  --fg-dim: #6b7280;
+  --accent: #3ddc97;
+  --error: #ef4444;
+  --border: #1f2428;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.app__brand {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.status {
+  color: var(--fg-dim);
+  font-size: 0.85rem;
+}
+
+.status--ok {
+  color: var(--accent);
+}
+
+.status--error {
+  color: var(--error);
+}
+
+.caption-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.caption {
+  max-width: 48rem;
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+}
+
+.caption__committed {
+  color: var(--fg);
+}
+
+.caption__pending {
+  color: var(--fg-dim);
+}
+
+.app__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.level-meter {
+  width: 100%;
+  max-width: 20rem;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.level-meter__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 60ms linear;
+}
+
+.start-btn {
+  background: var(--accent);
+  color: #04140d;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.start-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.refresh-btn {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.65rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.refresh-btn:not(:disabled):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.privacy-note {
+  color: var(--fg-dim);
+  font-size: 0.8rem;
+}

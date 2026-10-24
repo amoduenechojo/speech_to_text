@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# old prototype script output
+output.txt
+
+# model weights cached by faster-whisper / torch.hub at runtime
+model-cache/

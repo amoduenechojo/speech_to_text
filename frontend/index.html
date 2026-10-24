@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpeakLife</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <span class="app__brand">SpeakLife</span>
+      <span id="status" class="status">Idle</span>
+    </header>
+
+    <section class="caption-wrap">
+      <p id="caption" class="caption"></p>
+    </section>
+
+    <footer class="app__footer">
+      <div class="level-meter" aria-hidden="true">
+        <div id="level-bar" class="level-meter__bar"></div>
+      </div>
+      <div class="btn-row">
+        <button id="start-btn" class="start-btn" type="button">Start listening</button>
+        <button id="refresh-btn" class="refresh-btn" type="button" disabled>Refresh</button>
+      </div>
+      <span class="privacy-note">Processed locally — nothing leaves this server.</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
