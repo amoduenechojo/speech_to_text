@@ -10,8 +10,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu "torch>=2.2" \
     && pip install --no-cache-dir -r requirements.txt
 
+
 COPY backend/app ./app
 COPY main.py ./main.py
+
 
 COPY frontend /frontend
 
